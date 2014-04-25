@@ -19,12 +19,31 @@
 
       You can link any CSS, LESS, or image files in your `assets` directory
       as you would normally: using <link/> tags.
-      
+
     -->
-    <link rel="stylesheet" href="css/app.css"/>
+    <link rel="stylesheet" href="styles/importer.css"/>
   </head>
 
   <body>
+
+    <!-- Top-level navbar: -->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Babelfish</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <div class="navbar-right" role="form">
+          </div><!--/.navbar-right -->
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
 
     <!-- Include the view file for the current controller/route -->
     <%- body %>
@@ -34,7 +53,7 @@
       Client-side Javascript
       ========================
 
-      You can import any js files in your `assets` directory as you would 
+      You can import any js files in your `assets` directory as you would
       normally: using <script></script> tags.
 
       Here's an example of importing a few dependencies, in order:
@@ -57,7 +76,7 @@
       Another way: The Asset Linker
       ========================
 
-      Sails supports a Grunt-based asset linker, to automatically inject 
+      Sails supports a Grunt-based asset linker, to automatically inject
       <link> and <script> tags, as well any client-side templates you're using
       into your HTML layouts and views, respecting dependencies.
 
@@ -66,6 +85,7 @@
       http://sailsjs.org/#!documentation/asset-management
 
     -->
-
+      <script src="js/bower_components/jquery/dist/jquery.min.js"></script>
+      <script src="js/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     </body>
 </html>

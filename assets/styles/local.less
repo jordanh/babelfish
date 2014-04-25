@@ -1,0 +1,107 @@
+/**
+ * local.less
+ *
+ * Local style definitions. Loaded last.
+ */
+
+@footer-height: 60px;
+
+#converse-viewport
+{
+  overflow: scroll;
+  margin-bottom: (@footer-height + 23px);
+}
+
+#footer
+{
+	position:fixed;
+	left:0px;
+	bottom:0px;
+	width:100%;
+	background: @gray;
+	line-height: @footer-height;
+	color:#fff;
+  padding-left: 16px;
+}
+
+.chat
+{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.chat li
+{
+  padding: 60px;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px dotted #B3A9A9;
+}
+
+.chat li .chat-body p
+{
+  margin: 16px;
+  color: #777777;
+}
+
+.chat .translation
+{
+  font-style: italic;
+}
+
+/*
+ * Bootstrap-esq table-like div styling:
+ */
+.table
+{
+  display:table;
+  background-color: @body-bg;
+}
+
+.tr:first-child
+{
+  vertical-align: bottom;
+  border-bottom: 2px solid @table-border-color;
+}
+
+.tr:first-child .td
+{
+  padding: @table-cell-padding;
+  line-height: @line-height-base;
+  vertical-align: top;
+  border-top: 1px solid @table-border-color;
+}
+
+.tr
+{
+  display:table-row;
+}
+
+.td
+{
+  display:table-cell;
+}
+
+.table-condensed .td
+{
+  padding: @table-condensed-cell-padding;
+}
+
+.table-bordered .tr .td
+{
+  border: 1px solid @table-border-color;
+}
+
+.table-bordered .tr:first-child .td
+{
+  border-bottom-width: 2px;
+}
+
+.table-striped {
+  .tr:nth-child(odd) {
+    .td {
+      background-color: @table-bg-accent;
+    }
+  }
+}

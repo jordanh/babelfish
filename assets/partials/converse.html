@@ -1,0 +1,36 @@
+
+<div class="container">
+  <div id="converse-viewport">
+    <h2>Conversation with {{ conversation.name }}</h2>
+
+    <ul class="chat">
+      <li ng-repeat="message in conversation.messages">
+          <span ng-class="messageClass(message)">
+            <img src="http://placehold.it/50/{{ message.isFromPhone ? 'FA6F57' : '104080' }}/fff&amp;text={{ message.isFromPhone ? 'SMS' : 'WEB' }}"
+                 alt="User Avatar" class="img-circle">
+          </span>
+          <div class="chat-body clearfix">
+            <p ng-class="messageClass(message)">
+              {{ message.body }}
+              <span ng-if="message.translation"
+                    class="translation">
+                <br/>
+                (translation: {{ message.translation }})
+              </span>
+            </p>
+          </div>
+      </li>
+    </ul>
+  </div>
+</div><!--/.container -->
+
+<div id="footer">
+  <form name="formNg" class="navbar-form" novalidate>
+      <input type="text" class="form-control input-sm" style="width: 75%;"
+             ng-model="message" required
+             ng-minlength="1" ng-maxlength="140" />
+      <button class="btn btn-sm btn-primary"
+              ng-disabled="formNg.$pristine || formNg.$invalid"
+              ng-click="sendMessage(formNg)">Send</button>
+  </form>
+</div>

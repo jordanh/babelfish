@@ -1,0 +1,29 @@
+<div class="td">
+  <a ng-hide="form.id == null" ng-href="#/converse/{{form.id}}">
+    Converse
+  </a>
+</div>
+<div class="td">
+  <input type="text" ng-hide="true" ng-model="form.id" />
+  <input type="text" class="form-control input-sm" ng-minlength="1" ng-maxlength="80" ng-model="form.name" />
+</div>
+<div class="td">
+  <input type="text" class="form-control input-sm" ng-minlength="1" ng-maxlength="16" ng-model="form.phoneNumber" />
+</div>
+<div class="td">
+  <select class="form-control" name="language" ng-model="form.language">
+    <option value="zh">Chinese</option>
+    <option value="en">English</option>
+    <option value="de">German</option>
+    <option value="fr">French</option>
+    <option value="es">Spanish</option>
+  </select>
+</div>
+<div class="td">
+  <button class="btn btn-primary"
+          ng-disabled="formNg.$pristine || formNg.$invalid"
+          ng-click="submitForm(formNg)">{{ submitButtonText }}</button>
+  <button class="btn btn-danger"
+          ng-hide="form.id == null"
+          ng-click="delete($index)">Delete</button>
+</div>

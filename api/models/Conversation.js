@@ -8,6 +8,7 @@
 module.exports = {
 
   attributes: {
+    name: 'string',
     phoneNumber: 'string',
     language: 'string',
 
@@ -15,6 +16,13 @@ module.exports = {
       collection: 'message',
       via: 'conversation'
     }
+  },
+
+  beforeCreate: function (conversation, cb) {
+    /* normalize the phone number before inserting in database: */
+    conversation.phoneNumber = TwilioService.normalizeNumber(
+      conversation.phoneNumber);
+
+    cb();
   }
 };
-
