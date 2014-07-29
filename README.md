@@ -105,6 +105,12 @@ $ node app.js
 Babelfish is based on the excellent [Sails](http://sailsjs.org)
 full-stack Javascript MVC framework and AngularJS.
 
+All the client-side action kicks off from assets/js/app.js.
+
+The server-side action is run from app.js, but config/routes.js
+plus api/controllers/*.js will give you the best entry point to
+the backend action.
+
 Babelfish's realtime updates use websockets. The browser loads
 the Sail's io module and makes it available to AngularJS using
 sails.io.js
@@ -114,7 +120,6 @@ See assets/js/controllers.js for implementation.
 Because this application uses Websockets, make certain your
 hosting platform supports them. If using Heroku, you will
 explicitly need to enable them.
-
 
 ## License
 
