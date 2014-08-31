@@ -1,7 +1,9 @@
 The Babelfish
 =============
 
-Communicate in a foreign language by text message.
+A web application to communicate in a foreign language by text message.
+
+See the video: https://vimeo.com/102126785
 
 VERSION 0.0.9
 
